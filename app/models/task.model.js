@@ -3,7 +3,7 @@ module.exports = mongoose => {
     const TaskSchema = mongoose.model(
         "task",
         mongoose.Schema({
-            titular: String,
+            titulo: String,
             descripcion: String,
             tags:[String],
             creado:{type:Date, default:Date.now},
