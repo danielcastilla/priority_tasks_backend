@@ -1,9 +1,8 @@
-module.exports = mongoose => {
+var mongoose = require('mongoose')
+var Schema = mongoose.Schema
 
-    const TaskSchema = mongoose.model(
-        "task",
-        mongoose.Schema({
-            titulo: String,
+var taskSchema = new Schema({
+            titular: String,
             descripcion: String,
             tags:[String],
             creado:{type:Date, default:Date.now},
@@ -11,6 +10,7 @@ module.exports = mongoose => {
             seguir:Boolean,
             autor:String
     })
-    );
-    return TaskSchema;
-}
+
+var Task = mongoose.model('Task', taskSchema)
+
+module.exports = Task

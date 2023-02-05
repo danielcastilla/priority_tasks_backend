@@ -41,9 +41,8 @@ exports.create = (req, res) => {
 
 };
 
-// Retrieve all Tutorials from the database.
 exports.findAll = (req, res) => {
-  
+    res.json({ message: "Server started" });
 };
 
 // Find a single Tutorial with an id
